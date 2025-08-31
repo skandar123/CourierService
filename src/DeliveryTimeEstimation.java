@@ -26,8 +26,8 @@ public class DeliveryTimeEstimation {
         List<Shipment> shipments = cs.addPackagesToShipment(max_carriable_weight, packages);
 
         cs.calculateDeliveryTime(speed, shipments); //Calculating delivery time for packages
-        List<Shipment> shipments2 = cs.calculateShippingTime(speed, shipments); //Calculating delivery time for shipments
-        cs.assignVehicles(num_of_vehicles, shipments2); //Assigning vehicles to shipments
+        cs.calculateShippingTime(speed, shipments); //Calculating delivery time for shipments
+        cs.assignVehicles(num_of_vehicles, shipments); //Assigning vehicles to shipments
 
         for(Package p : packages){
             //Calculating Discount percent if applicable

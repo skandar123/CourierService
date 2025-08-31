@@ -38,7 +38,7 @@ public class CourierService {
     }
 
     //Calculating delivery time of shipments
-    public List<Shipment> calculateShippingTime(int speed, List<Shipment> shipments){
+    public void calculateShippingTime(int speed, List<Shipment> shipments){
         for(Shipment s: shipments){
             int n=s.packages.size(), max_distance = 0;
 
@@ -52,7 +52,6 @@ public class CourierService {
             timeForDelivery *= 2; //Time for round trip
             s.setTime(timeForDelivery);
         }
-        return shipments;
     }
 
     //Calculating delivery time for individual packages
