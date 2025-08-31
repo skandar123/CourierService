@@ -1,0 +1,53 @@
+Delivery Cost Estimation
+========================
+There are N no.of vehicles and have driver partners to drive each vehicle and deliver packages.
+Only one offer code can be applied for any given package.
+Package should meet the required mentioned offer criterias.
+If offer code is not valid/found, discounted amount will be equal to 0.
+For offer code OFR001, 10% discount if distance is less than 200 and weight is between 70 and 200.
+For offer code OFR002, 7% discount if distance is between 50 and 150 and weight is between 100 and 250.
+For offer code OFR003, 5% discount if distance is between 50 and 250 and weight is between 10 and 150.
+
+Input
+=====
+100 3
+PKG1 5 5 OFR001
+PKG2 15 5 OFR002
+PKG3 10 100 OFR003
+
+Output
+======
+PKG1 0 175
+PKG2 0 275
+PKG3 35 665
+
+Delivery Time Estimation
+========================
+You have to build a courier service to deliver packages.
+There are N number of vehicles available for delivering the packages.
+Each Vehicle has a limit(L) on maximum weight (kg) that it can carry.
+All vehicles travel at the same speed (S km/hr) and in the same route.
+It is assumed that all the destinations can be covered in a single route.
+The vehicles always travel at max speed and post package deliver, vehicle will return back to the source station with the same speed and will be available for another shipment.
+Shipment should contain max packages vehicle can carry in a trip.
+We should prefer heavier packages when there are multiple shipments with the same number of packages.
+If the weights are also the same, preference should be given to the shipment which can be delivered first.
+You are required to build a command line application to calculate the estimated delivery time for every package by maximizing number of packages in every shipment.
+
+Input
+=====
+100 5
+PKG1 50 30 OFR001
+PKG2 75 125 OFFR0008
+PKG3 175 100 OFFR003
+PKG4 110 60 OFR002
+PKG5 155 95 NA
+2 70 200
+
+Output
+======
+PKG1 0 750 3.98
+PKG2 0 1475 1.78
+PKG3 0 2350 1.42
+PKG4 105 1395 0.85
+PKG5 0 2125 4.19
